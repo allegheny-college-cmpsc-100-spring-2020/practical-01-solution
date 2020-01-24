@@ -64,15 +64,57 @@ git clone git@github.com:allegheny-college-cmpsc-100-spring-2020/cmpsc-100-sprin
 
 Since its first incarnation in the early 1970s, the "Hello, World" is typically the first program every programmer writes when learning the conventions of a new programming language. Our experience with Java will be no different. This program prints the phrase `Hello, World!` to the screen. Our implementation has a small additional requirement: a single-line comment above the print statement which describes the function of the print statement below it.
 
+We will do some experimentation with form of the program in class, but a final `commit` should feature code which passes `gradle build` in addition to `gradle run`. This form of the program should look like the following example:
+
+```java
+package practicalone;
+
+/** Implements a Java "Hello, World!" program.
+ *
+ * @author Douglas Luman
+ */
+public class HelloWorld {
+
+  /** Entry point.
+   *
+   * @param args The command line arguments
+   */
+  public static void main(String[] args) {
+    // The following prints a single line to the screen
+    System.out.println("Hello, World!");
+  }
+}
+```
+
 For the purposes of this assignment, the features of a "Hello, World!" program are:
 
 - [ ] A complete `main` method composed of:
-    * Correct "method signature" (for `main` methods, it is _always_ the same as we've seen in class)
+    * Correct "method signature" (for `main` methods, it is _always_ the same as we will see in class)
     * One single-line comment describing the print statement below
     * A single `System.out.println` statement which prints `Hello, World!` to the screen
     * Correct opening and closing braces indicating the method's boundaries
 - [ ] Code which passes `gradle build` and `gradle -q --console plain run`
     * This ensures both _legible_ and _runnable_ code
+
+### Going further
+
+Once you've written your program, experiment with some of alterations below (you can always use the "Undo" command to return your program to a working state).
+
+| Shortcuts for undo |                   |
+|--------------------|-------------------|
+| Windows/Unix       | `CTRL + Z`          |
+| Mac                | `⌘ + Z`             |
+
+Try some of:
+
+- [ ] Add varying amounts of additional spaces in front of any of the lines and use the `gradle run` command. Then, use the `gradle build` command.
+    * What happens?
+- [ ] Remove `String[] args` from the parenthesis and attempt to use `gradle run`.
+    * What do you find out?
+- [ ] Change the `main` keyword to `starthere` and attempt to `gradle run`
+    * What happens?
+- [ ] Remove any of the `public`, `static` or `void` keyword and use `gradle run`.
+    * What does this do (or not do)?
 
 ## GatorGrader
 
